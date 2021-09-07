@@ -1,17 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom"
+
+import './index.css'
+import Primeiro from './components/Primeiro'
+import ComParametro from './components/ComParametro'
+import ComFilhos from './components/ComFilhos'
+import Card from './components/layout/Card'
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <div>
+        <Card titulo='Primeiro Componente'>
+            <Primeiro/>
+        </Card>
+        <Card titulo='Componente Com Filhos'>
+            <ComFilhos>
+                <ul>
+                    <li>Ana</li>
+                    <li>Bia</li>
+                    <li>Carlos</li>
+                    <li>Daniel</li>
+                </ul>
+            </ComFilhos>
+        </Card>
+        <Card titulo='Componente Com Parametro'>
+            <ComParametro titulo='Esse é o título'
+                subtitulo='Esse é o subtitulo' />
+        </Card>
+        <Card titulo='Primeiro Componente'>
+            <Primeiro />
+        </Card>
+    </div>,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    document.getElementById('root')
+)
