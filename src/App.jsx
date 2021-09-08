@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css'
 
 import Card from './components/layout/Card'
+
 import Primeiro from './components/Primeiro'
 import ComParametro from './components/ComParametro'
 import ComFilhos from './components/ComFilhos'
 import Repeticao from './components/Repeticao';
+import Condicional from './components/Condicional';
+
 
 export default (props) => (
     <div className="App">
@@ -31,6 +34,9 @@ export default (props) => (
         </Card>
         <Card titulo='Repetição'>
             <Repeticao></Repeticao>
+        </Card>
+        <Card titulo='Condicional'>
+            <Condicional numero={10} ></Condicional>
         </Card>
     </div>
 )
