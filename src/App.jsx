@@ -1,12 +1,14 @@
 import React from 'react';
+import './App.css'
 
+import Card from './components/layout/Card'
 import Primeiro from './components/Primeiro'
 import ComParametro from './components/ComParametro'
 import ComFilhos from './components/ComFilhos'
-import Card from './components/layout/Card'
+import Repeticao from './components/Repeticao';
 
 export default (props) => (
-    <div>
+    <div className="App">
         <Card titulo='Primeiro Componente'>
             <Primeiro />
         </Card>
@@ -26,6 +28,9 @@ export default (props) => (
         </Card>
         <Card titulo='Primeiro Componente'>
             <Primeiro />
+        </Card>
+        <Card titulo='Repetição'>
+            <Repeticao></Repeticao>
         </Card>
     </div>
 )
